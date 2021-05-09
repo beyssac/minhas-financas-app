@@ -1,11 +1,13 @@
 import React from 'react'
 import NavbarItem from './navbaritem'
+import AuthService from '../app/service/authService'
+import {AuthConsumer} from '../main/provedorAutenticacao'
 
-function Navbar(){
+function Navbar(props){
     return(
         <div className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
             <div className="container">
-                <a href="https://bootswatch.com/" className="navbar-brand">Minhas Finanças</a>
+                <a href="#/home" className="navbar-brand">Minhas Finanças</a>
                 <button className="navbar-toggler" type="button" 
                         data-toggle="collapse" data-target="#navbarResponsive" 
                         aria-controls="navbarResponsive" aria-expanded="false" 
@@ -14,10 +16,10 @@ function Navbar(){
                 </button>
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav">
-                        <NavbarItem label="Home" href="#/home" />
-                        <NavbarItem label="Usuários" href="#/cadastro-usuarios" />
-                        <NavbarItem label="Lançamentos" href="#/consulta-lancamentos" />
-                        <NavbarItem label="Login" href="#/login" />                        
+                        <NavbarItem render={props.isUsuarioAutenticado} label="Home" href="#/home" />
+                        <NavbarItem render={props.isUsuarioAutenticado} label="Usuários" href="#/cadastro-usuarios" />
+                        <NavbarItem render={props.isUsuarioAutenticado} label="Lançamentos" href="#/consulta-lancamentos" />
+                        <NavbarItem render={props.isUsuarioAutenticado} onClick={props.deslogar} label="Sair" href="#/login" />                        
                     </ul>
                 </div>
             </div>
@@ -25,4 +27,10 @@ function Navbar(){
     )
 }
 
-export default Navbar
+export default () => (
+    <AuthConsumer>
+        { (context) => (
+            <Navbar isUsuarioAutenticado={context.isAutenticado} deslogar={context.encerrarSessao}/>
+        )}
+    </AuthConsumer>
+)

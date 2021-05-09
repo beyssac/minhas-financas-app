@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default (props) => {
+function SelectMenu(props){
 
     const options = props.lista.map( (option, index) => {
 
@@ -17,3 +17,5 @@ export default (props) => {
     )
 
 }
+
+export default SelectMenu
