@@ -1,4 +1,4 @@
-Here goes the front-end (React project) of Minhas-Financas project!
+Here goes the front-end (a React project) of Minhas-Financas project!
 Use minhasfinancas-api (Spring Boot project) as back-end for it!
 
 # Getting Started with Create React App
