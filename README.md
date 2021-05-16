@@ -1,3 +1,6 @@
+Here goes the front-end (React project) of Minhas-Financas project!
+Use minhasfinancas-api (Spring Boot project) as back-end for it!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
