@@ -29,9 +29,9 @@ class CadastroUsuario extends React.Component{
        
         const {nome, email, senha, senhaRepeticao} = this.state
         
-        const usuario = {nome, email, senha}
+        const usuario = {nome, email, senha, senhaRepeticao}
 
-        try {
+        try {            
             this.service.validar(usuario)            
         } catch (erro) {
             const mensagens = erro.mensagens;
