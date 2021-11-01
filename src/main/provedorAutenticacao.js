@@ -16,8 +16,7 @@ class ProvedorAutenticacao extends React.Component{
     }
 
     iniciarSessao = (usuario) => {
-        const token = usuario.token
-        ApiService.registrarToken(token)
+        const token = usuario.token        
         const claims = jwt.decode(token)
 
         const usuarioLocal = {
