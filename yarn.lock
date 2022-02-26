@@ -3850,10 +3850,10 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
   integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
-currency-formatter@^1.5.7:
-  version "1.5.7"
-  resolved "https://registry.yarnpkg.com/currency-formatter/-/currency-formatter-1.5.7.tgz#4c5b83964204e6fc40523690f65b4542beb915c5"
-  integrity sha512-alZI2v4UdSH5YLgOkM6StBVENstd/aX2zxVoGUdsWauq98vIsYP7UKgoDhXXTdGFMGFizf5zcTWHdxRNlkNJPQ==
+currency-formatter@^1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/currency-formatter/-/currency-formatter-1.5.9.tgz#23880e8c9cefddd24481795adaed65418b4e7048"
+  integrity sha512-47reIlQZzLn+WWI8xPDCaunwLd/abGnPwAXpM8hEvjeuRB8CVa4KjkZJ4Eo0MO1OKXqeiel71O04ITz+6NMzdA==
   dependencies:
     accounting "^0.4.1"
     locale-currency "0.0.2"
